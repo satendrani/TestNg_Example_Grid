@@ -1,0 +1,1 @@
+java -jar C:\Users\saten\IdeaProjects\SeleniumGrid\resources\gridsetup\selenium-server-standalone-3.141.59.jar -role hub
