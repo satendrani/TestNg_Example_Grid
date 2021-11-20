@@ -8,16 +8,22 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 
 public class GridDemo_GoogleHomePageTest {
 
     WebDriver driver;
+    String projectPath = System.getProperty("user.dir");
 
     @BeforeSuite
-    public void setup() {
+    public void setup() throws IOException, InterruptedException {
         System.out.println("making a setup");
+        Runtime.getRuntime().exec(projectPath + "/resources/gridsetup/hub.bat");
+        Thread.sleep(5000);
+        Runtime.getRuntime().exec(projectPath + "/resources/gridsetup/node.bat");
+        Thread.sleep(5000);
     }
 
     @JiraPolicy(logTicketReady = true)
