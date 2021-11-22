@@ -7,6 +7,11 @@
     </listeners>
 
     <test thread-count="5" name="Selenium Grid Test - Parallel Execution">
+        <groups>
+            <run>
+                <include name="sanity"/>
+            </run>
+        </groups>
         <classes>
             <class name="GridDemo_GoogleHomePageTest"/>
         </classes>
