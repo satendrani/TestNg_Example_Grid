@@ -2,6 +2,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Example Reversing String">
     <test verbose="2" preserve-order="true" name="ReverseStringTest">
+        <groups>
+            <run>
+                <include name="sanity"/>
+            </run>
+        </groups>
         <classes>
             <class name="ReverseStringTest">
             </class>

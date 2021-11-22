@@ -6,28 +6,26 @@ public class ReverseStringTest {
     String reverse = "";
 
     @Test(groups = "run_by_program")
-    public static void main(String[] args) {
-        ReverseStringTest rs = new ReverseStringTest();
-        rs.reverse_string(original);
-        rs.reverse_string_inbuild_methods(original);
+    public void main_method() {
+        System.out.println("Original Main String is : " + original);
     }
 
     @Test(groups = "sanity")
-    public void reverse_string(String text_for_reverse) {
-        for (int i = text_for_reverse.length() - 1; i >= 0; i--) {
-            reverse = reverse + text_for_reverse.charAt(i);
+    public void reverse_string() {
+        for (int i = original.length() - 1; i >= 0; i--) {
+            reverse = reverse + original.charAt(i);
         }
-        System.out.println("Original String is : " + text_for_reverse);
+        System.out.println("Original String is : " + original);
         System.out.println("Reversal String is : " + reverse);
     }
 
     @Test(groups = "sanity")
-    public void reverse_string_inbuild_methods(String text_for_reverse) {
-        StringBuffer sb = new StringBuffer().append(text_for_reverse);
-        String b = sb.reverse().toString();
+    public void reverse_string_inbuild_methods() {
+        StringBuffer sb = new StringBuffer().append(original);
+        String reverse = sb.reverse().toString();
 
-        System.out.println("Original String is : " + text_for_reverse);
-        System.out.println("Reversal String is : " + b);
+        System.out.println("Original String is : " + original);
+        System.out.println("Reversal String is : " + reverse);
     }
 
 }
