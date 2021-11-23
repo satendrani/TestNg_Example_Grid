@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Example Reversing String">
+    <listeners>
+        <listener class-name="com.listeners.ReporterListener"></listener>
+    </listeners>
+
+    <test thread-count="5" name="Extent Report Demo">
+        <classes>
+            <class name="ExtentReportDemo1"></class>
+            <class name="ExtentReportDemo2"></class>
+            <class name="ExtentReportDemo3"></class>
+        </classes>
+    </test>
+</suite>

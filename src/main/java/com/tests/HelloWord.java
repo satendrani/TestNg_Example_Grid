@@ -1,4 +1,4 @@
-package com.examples;
+package com.tests;
 
 public class HelloWord {
     public static void main(String[] args) {
