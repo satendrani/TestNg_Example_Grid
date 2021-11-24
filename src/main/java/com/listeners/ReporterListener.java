@@ -3,6 +3,7 @@ package com.listeners;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.model.ScreenCapture;
 import com.util.ExtentReporterNG;
 import com.util.JiraPolicy;
 import com.util.JiraServiceProvider;
@@ -26,6 +27,8 @@ public class ReporterListener implements ITestListener {
     public void onTestSuccess(ITestResult result) {
         ITestListener.super.onTestSuccess(result);
         test.log(Status.PASS, "Successful");
+//        test.addScreenCaptureFromPath()
+
     }
 
     @Override

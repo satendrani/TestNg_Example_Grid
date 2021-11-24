@@ -1,3 +1,5 @@
+package com.mypages;
+
 import com.mypages.BasePage;
 import com.util.JiraPolicy;
 import org.junit.Assert;

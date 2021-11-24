@@ -12,12 +12,12 @@
             </run>
         </groups>
         <classes>
-            <class name="GridDemo_GoogleHomePageTest"/>
-            <class name="SauceLabsConnection"/>
-            <class name="ReverseStringTest"/>
-            <class name="ExtentReportDemo1"/>
-            <class name="ExtentReportDemo2"/>
-            <class name="ExtentReportDemo3"/>
+            <class name="tests.GridDemo_GoogleHomePageTest"/>
+            <class name="tests.SauceLabsConnection"/>
+            <class name="tests.ReverseStringTest"/>
+            <class name="com.mypages.ExtentReportDemo1"/>
+            <class name="com.mypages.ExtentReportDemo2"/>
+            <class name="com.mypages.ExtentReportDemo3"/>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->

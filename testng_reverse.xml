@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Example Reversing String">
-    <test verbose="2" preserve-order="true" name="ReverseStringTest">
+    <test verbose="2" preserve-order="true" name="tests.ReverseStringTest">
         <groups>
             <run>
                 <include name="sanity"/>
             </run>
         </groups>
         <classes>
-            <class name="ReverseStringTest">
+            <class name="tests.ReverseStringTest">
             </class>
         </classes>
     </test>

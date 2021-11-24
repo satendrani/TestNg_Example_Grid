@@ -1,3 +1,5 @@
+package tests;
+
 import com.util.JiraPolicy;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -48,7 +50,7 @@ public class GridDemo_GoogleHomePageTest {
         driver.get("https://www.google.com/");
         System.out.println("Title of the page is " + driver.getTitle());
         Assert.assertEquals(driver.getTitle(), "Google");
-        driver.quit();
+        driver.close();
         System.out.println("Test1... ended");
     }
 
@@ -68,7 +70,7 @@ public class GridDemo_GoogleHomePageTest {
         System.out.println("Title of the page is " + driver.getTitle());
 
         Assert.assertEquals(driver.getTitle(), "Google");
-        driver.quit();
+        driver.close();
         System.out.println("Test1... ended");
     }
 
@@ -87,7 +89,7 @@ public class GridDemo_GoogleHomePageTest {
         driver.get("https://www.google.com/");
         System.out.println("Title of the page is " + driver.getTitle());
         Assert.assertEquals(driver.getTitle(), "Google");
-        driver.quit();
+        driver.close();
         System.out.println("Test1... ended");
     }
 
@@ -106,7 +108,7 @@ public class GridDemo_GoogleHomePageTest {
         driver.get("https://www.google.com/");
         System.out.println("Title of the page is " + driver.getTitle());
         Assert.assertEquals(driver.getTitle(), "Google");
-        driver.quit();
+        driver.close();
         System.out.println("Test1... ended");
     }
 
@@ -126,7 +128,7 @@ public class GridDemo_GoogleHomePageTest {
         System.out.println("Title of the page is " + driver.getTitle());
         Assert.assertEquals(driver.getTitle(), "Google");
 
-        driver.quit();
+        driver.close();
 //        Assert.assertEquals("Ram", "Shyam");
         System.out.println("Test1... ended");
     }
@@ -158,7 +160,7 @@ public class GridDemo_GoogleHomePageTest {
         System.out.println("Title of the page is " + driver.getTitle());
         Assert.assertEquals(driver.getTitle(), "Security Verification | LinkedIn");
 
-        driver.quit();
+        driver.close();
         System.out.println("Sauce Lab test... ended");
     }
 
@@ -166,6 +168,6 @@ public class GridDemo_GoogleHomePageTest {
     @AfterSuite
     public void teardown() {
         System.out.println("tear down");
-//        driver.quit();
+        driver.quit();
     }
 }

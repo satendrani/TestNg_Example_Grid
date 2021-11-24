@@ -1,3 +1,5 @@
+package tests;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -43,7 +45,7 @@ public class SauceLabsConnection {
         System.out.println("Title of the page is " + driver.getTitle());
         Assert.assertEquals(driver.getTitle(), "Security Verification | LinkedIn");
 
-        driver.quit();
+        driver.close();
         System.out.println("Sauce Lab test... ended");
     }
 

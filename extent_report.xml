@@ -7,9 +7,9 @@
 
     <test thread-count="5" name="Extent Report Demo">
         <classes>
-            <class name="ExtentReportDemo1"></class>
-            <class name="ExtentReportDemo2"></class>
-            <class name="ExtentReportDemo3"></class>
+            <class name="com.mypages.ExtentReportDemo1"></class>
+            <class name="com.mypages.ExtentReportDemo2"></class>
+            <class name="com.mypages.ExtentReportDemo3"></class>
         </classes>
     </test>
 </suite>
