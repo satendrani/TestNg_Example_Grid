@@ -12,7 +12,6 @@ import java.io.IOException;
 
 public class ExtentReporterNG extends BaseTest {
 
-    static String projectPath = System.getProperty("user.dir");
     static ExtentReports extent;
 
     public static ExtentReports extendReportGenerator() {

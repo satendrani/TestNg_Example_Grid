@@ -16,10 +16,10 @@ public class ExtentReportDemo3 extends BasePage {
     @Test(enabled = true, groups = "sanity")
     public void initialDemoThree() throws InterruptedException {
         System.out.println("initialDemoTwo Test... started");
-        driver = initializeDriver();
+        driver = initializeDriver("firefox");
         driver.get("http://www.google.com/");
         WebElement searchBox = driver.findElement(By.name("q"));
-        searchBox.sendKeys("ChromeDriver");
+        searchBox.sendKeys("chrome");
         searchBox.submit();
         Thread.sleep(5000);  // Let the user actually see something!
         Assert.assertTrue(true);

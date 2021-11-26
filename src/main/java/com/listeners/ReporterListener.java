@@ -15,29 +15,25 @@ import org.testng.ITestResult;
 
 public class ReporterListener extends ExtentReporterNG implements ITestListener {
     ExtentReports extent = ExtentReporterNG.extendReportGenerator();
-    GridDemo_GoogleHomePageTest grid_test = new GridDemo_GoogleHomePageTest();
-    final String projectPath = System.getProperty("user.dir");
     ExtentTest test;
 
     @Override
     public void onTestStart(ITestResult result) {
-        ITestListener.super.onTestStart(result);
         test = extent.createTest(result.getMethod().getMethodName());
     }
 
     @Override
     public void onTestSuccess(ITestResult result) {
-//        ITestListener.super.onTestSuccess(result);
         test.log(Status.PASS, "Successful");
     }
 
     @SneakyThrows
     @Override
     public void onTestFailure(ITestResult result) {
-        test.fail(result.getThrowable());
-
         captureScreenShot(result.getMethod().getMethodName());
         test.addScreenCaptureFromPath(projectPath + "/resources/screenshots/" + result.getMethod().getMethodName() + ".png");
+
+        test.fail(result.getThrowable());
 
         JiraPolicy jiraPolicy = result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(JiraPolicy.class);
         boolean isTicketReady = jiraPolicy.logTicketReady();

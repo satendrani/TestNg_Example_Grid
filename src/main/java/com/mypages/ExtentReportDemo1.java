@@ -17,7 +17,7 @@ public class ExtentReportDemo1 extends BasePage {
     @Test(enabled = true, groups = "sanity")
     public void initialDemoOne() throws InterruptedException {
         System.out.println("initialDemoOne Test... started");
-        driver = initializeDriver();
+        driver = initializeDriver("chrome");
         driver.get("http://www.google.com/");
         WebElement searchBox = driver.findElement(By.name("q"));
         searchBox.sendKeys("ChromeDriver");

@@ -5,16 +5,16 @@
         <listener class-name="com.listeners.ReporterListener"></listener>
     </listeners>
 
-    <test thread-count="5" name="Selenium Grid Test - Parallel Execution">
+    <test thread-count="5" name="Extent Reporting">
         <groups>
             <run>
                 <include name="sanity"/>
             </run>
         </groups>
         <classes>
-            <class name="com.tests.GridDemo_GoogleHomePageTest"/>
-            <class name="com.tests.SauceLabsConnectionTest"/>
-            <class name="com.tests.ReverseStringTest"/>
+            <!--            <class name="com.tests.GridDemo_GoogleHomePageTest"/>-->
+            <!--            <class name="com.tests.SauceLabsConnectionTest"/>-->
+            <!--            <class name="com.tests.ReverseStringTest"/>-->
             <class name="com.mypages.ExtentReportDemo1"/>
             <class name="com.mypages.ExtentReportDemo2"/>
             <class name="com.mypages.ExtentReportDemo3"/>
