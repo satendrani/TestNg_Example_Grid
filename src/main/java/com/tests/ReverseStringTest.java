@@ -1,4 +1,4 @@
-package tests;
+package com.tests;
 
 import org.testng.annotations.Test;
 
@@ -29,5 +29,4 @@ public class ReverseStringTest {
         System.out.println("Original String is : " + original);
         System.out.println("Reversal String is : " + reverse);
     }
-
 }

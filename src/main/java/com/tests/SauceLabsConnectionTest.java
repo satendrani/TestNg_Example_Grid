@@ -1,4 +1,4 @@
-package tests;
+package com.tests;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class SauceLabsConnection {
+public class SauceLabsConnectionTest {
 
     WebDriver driver;
     String projectPath = System.getProperty("user.dir");

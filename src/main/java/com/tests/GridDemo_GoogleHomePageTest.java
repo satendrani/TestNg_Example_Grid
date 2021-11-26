@@ -1,11 +1,8 @@
-package tests;
+package com.tests;
 
 import com.util.JiraPolicy;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.Platform;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
@@ -13,14 +10,12 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class GridDemo_GoogleHomePageTest {
-
-    WebDriver driver;
-    String projectPath = System.getProperty("user.dir");
+public class GridDemo_GoogleHomePageTest extends BaseTest {
 
     public static String USER_NAME = "oauth-satendrani-63d14";
     public static String ACCESS_KEY = "b878f0fb-41b1-4359-a133-81aedfdfcdcd";
@@ -50,7 +45,7 @@ public class GridDemo_GoogleHomePageTest {
         driver.get("https://www.google.com/");
         System.out.println("Title of the page is " + driver.getTitle());
         Assert.assertEquals(driver.getTitle(), "Google");
-        driver.close();
+
         System.out.println("Test1... ended");
     }
 
@@ -70,7 +65,7 @@ public class GridDemo_GoogleHomePageTest {
         System.out.println("Title of the page is " + driver.getTitle());
 
         Assert.assertEquals(driver.getTitle(), "Google");
-        driver.close();
+
         System.out.println("Test1... ended");
     }
 
@@ -89,7 +84,7 @@ public class GridDemo_GoogleHomePageTest {
         driver.get("https://www.google.com/");
         System.out.println("Title of the page is " + driver.getTitle());
         Assert.assertEquals(driver.getTitle(), "Google");
-        driver.close();
+
         System.out.println("Test1... ended");
     }
 
@@ -108,7 +103,7 @@ public class GridDemo_GoogleHomePageTest {
         driver.get("https://www.google.com/");
         System.out.println("Title of the page is " + driver.getTitle());
         Assert.assertEquals(driver.getTitle(), "Google");
-        driver.close();
+
         System.out.println("Test1... ended");
     }
 
@@ -128,7 +123,6 @@ public class GridDemo_GoogleHomePageTest {
         System.out.println("Title of the page is " + driver.getTitle());
         Assert.assertEquals(driver.getTitle(), "Google");
 
-        driver.close();
 //        Assert.assertEquals("Ram", "Shyam");
         System.out.println("Test1... ended");
     }
@@ -147,9 +141,9 @@ public class GridDemo_GoogleHomePageTest {
 
         driver = new RemoteWebDriver(new URL("http://192.168.29.186:4444/wd/hub"), capabilities);
 
-//        driver = new RemoteWebDriver(new URL(URL_), capabilities);
-//        System.setProperty("webdriver.chrome.driver", projectPath+"/resources/drivers/chromedriver.exe");
-//        driver = new ChromeDriver();
+//        DriverConfiguration = new RemoteWebDriver(new URL(URL_), capabilities);
+//        System.setProperty("webdriver.chrome.DriverConfiguration", projectPath+"/resources/drivers/chromedriver.exe");
+//        DriverConfiguration = new ChromeDriver();
         driver.manage().window().maximize();
 
         driver.get("https://www.linkedin.com/");
@@ -160,14 +154,13 @@ public class GridDemo_GoogleHomePageTest {
         System.out.println("Title of the page is " + driver.getTitle());
         Assert.assertEquals(driver.getTitle(), "Security Verification | LinkedIn");
 
-        driver.close();
+
         System.out.println("Sauce Lab test... ended");
     }
-
 
     @AfterSuite
     public void teardown() {
         System.out.println("tear down");
-        driver.quit();
+//        DriverConfiguration.quit();
     }
 }

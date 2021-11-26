@@ -1,4 +1,4 @@
-package com.tests;
+package com.examples_java;
 
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;

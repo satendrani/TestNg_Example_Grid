@@ -12,7 +12,6 @@ import org.testng.annotations.Test;
 import java.net.MalformedURLException;
 
 public class ExtentReportDemo1 extends BasePage {
-    WebDriver driver;
 
     @JiraPolicy(logTicketReady = false)
     @Test(enabled = true, groups = "sanity")

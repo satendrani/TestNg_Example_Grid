@@ -1,4 +1,4 @@
-package com.tests;
+package com.examples_java;
 
 public class HelloWord {
     public static void main(String[] args) {
@@ -7,5 +7,4 @@ public class HelloWord {
             System.out.println("entered value: " + arg);
         }
     }
-
 }

@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite" parallel="methods" thread-count="5">
     <listeners>
-                <listener class-name="com.listeners.ReporterListener"></listener>
+        <listener class-name="com.listeners.ReporterListener"></listener>
     </listeners>
 
     <test thread-count="5" name="Selenium Grid Test - Parallel Execution">
@@ -12,9 +12,9 @@
             </run>
         </groups>
         <classes>
-            <class name="tests.GridDemo_GoogleHomePageTest"/>
-            <class name="tests.SauceLabsConnection"/>
-            <class name="tests.ReverseStringTest"/>
+            <class name="com.tests.GridDemo_GoogleHomePageTest"/>
+            <class name="com.tests.SauceLabsConnectionTest"/>
+            <class name="com.tests.ReverseStringTest"/>
             <class name="com.mypages.ExtentReportDemo1"/>
             <class name="com.mypages.ExtentReportDemo2"/>
             <class name="com.mypages.ExtentReportDemo3"/>

@@ -3,18 +3,20 @@ package com.listeners;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.model.ScreenCapture;
 import com.util.ExtentReporterNG;
 import com.util.JiraPolicy;
 import com.util.JiraServiceProvider;
+import lombok.SneakyThrows;
 import net.rcarz.jiraclient.JiraException;
 import org.apache.commons.lang.exception.ExceptionUtils;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-public class ReporterListener implements ITestListener {
+public class ReporterListener extends ExtentReporterNG implements ITestListener {
     ExtentReports extent = ExtentReporterNG.extendReportGenerator();
+    GridDemo_GoogleHomePageTest grid_test = new GridDemo_GoogleHomePageTest();
+    final String projectPath = System.getProperty("user.dir");
     ExtentTest test;
 
     @Override
@@ -25,15 +27,17 @@ public class ReporterListener implements ITestListener {
 
     @Override
     public void onTestSuccess(ITestResult result) {
-        ITestListener.super.onTestSuccess(result);
+//        ITestListener.super.onTestSuccess(result);
         test.log(Status.PASS, "Successful");
-//        test.addScreenCaptureFromPath()
-
     }
 
+    @SneakyThrows
     @Override
     public void onTestFailure(ITestResult result) {
         test.fail(result.getThrowable());
+
+        captureScreenShot(result.getMethod().getMethodName());
+        test.addScreenCaptureFromPath(projectPath + "/resources/screenshots/" + result.getMethod().getMethodName() + ".png");
 
         JiraPolicy jiraPolicy = result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(JiraPolicy.class);
         boolean isTicketReady = jiraPolicy.logTicketReady();
