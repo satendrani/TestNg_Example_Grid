@@ -1,4 +1,4 @@
-package com.util;
+/*package com.utils.jiraaccess;
 
 import net.rcarz.jiraclient.*;
 
@@ -30,3 +30,4 @@ public class JiraServiceProvider {
         System.out.println("issue in jira with ID: " + issue_jira);
     }
 }
+*/

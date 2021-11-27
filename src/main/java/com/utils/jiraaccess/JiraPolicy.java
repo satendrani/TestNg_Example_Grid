@@ -1,4 +1,4 @@
-package com.util;
+package com.utils.jiraaccess;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

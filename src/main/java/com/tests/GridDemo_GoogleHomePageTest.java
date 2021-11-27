@@ -1,7 +1,6 @@
 package com.tests;
 
-import com.util.JiraPolicy;
-import org.apache.commons.io.FileUtils;
+import com.utils.jiraaccess.JiraPolicy;
 import org.openqa.selenium.*;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -10,7 +9,6 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
-import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;

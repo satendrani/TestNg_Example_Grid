@@ -1,23 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite" parallel="methods" thread-count="5">
+<suite name="N11 Test Suite">
     <listeners>
-        <listener class-name="com.listeners.ReporterListener"></listener>
+        <listener class-name="com.utils.listeners.TestListener"/>
+        <listener class-name="com.utils.listeners.AnnotationTransformer"/>
     </listeners>
 
-    <test thread-count="5" name="Extent Reporting">
-        <groups>
-            <run>
-                <include name="sanity"/>
-            </run>
-        </groups>
+    <test name="LoginTest">
         <classes>
-            <!--            <class name="com.tests.GridDemo_GoogleHomePageTest"/>-->
-            <!--            <class name="com.tests.SauceLabsConnectionTest"/>-->
-            <!--            <class name="com.tests.ReverseStringTest"/>-->
-            <class name="com.mypages.ExtentReportDemo1"/>
-            <class name="com.mypages.ExtentReportDemo2"/>
-            <class name="com.mypages.ExtentReportDemo3"/>
+            <class name="com.tests.LoginTests"/>
         </classes>
-    </test> <!-- Test -->
-</suite> <!-- Suite -->
+    </test>
+</suite>

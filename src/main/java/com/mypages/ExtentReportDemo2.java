@@ -1,16 +1,17 @@
 package com.mypages;
 
-import com.mypages.BasePage;
-import com.util.JiraPolicy;
+import com.utils.jiraaccess.JiraPolicy;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-import java.net.MalformedURLException;
-
 public class ExtentReportDemo2 extends BasePage {
+
+    public ExtentReportDemo2(WebDriver driver) {
+        super(driver);
+    }
 
     @JiraPolicy(logTicketReady = false)
     @Test(enabled = true, groups = "sanity")
