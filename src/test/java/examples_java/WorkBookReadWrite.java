@@ -12,7 +12,7 @@ public class WorkBookReadWrite {
 
     public static void main(String[] args) throws IOException {
 
-        FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/main/resources/TestData.xls");
+        FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "/src/test/test_data/TestData.xls");
         HSSFWorkbook workbook = new HSSFWorkbook(fis);
         HSSFSheet sheet = workbook.getSheet("TestSheet");
 
