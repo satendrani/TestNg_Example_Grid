@@ -8,7 +8,7 @@
             </run>
         </groups>
         <classes>
-            <class name="com.tests.ReverseStringTest">
+            <class name="tests.ReverseStringTest">
             </class>
         </classes>
     </test>
