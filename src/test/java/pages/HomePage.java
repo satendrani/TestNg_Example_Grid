@@ -15,19 +15,19 @@ public class HomePage extends BasePage {
     /**
      * Variables
      */
-    String baseURL = "http://www.n11.com/";
+    String baseURL = "https://www.flipkart.com/";
 
     /**
      * Web Elements
      */
-    By signInButtonClass = By.className("btnSignIn");
+    By signInButtonClass = By.xpath("//a[@href=\"/account/login?ret=/\"]");
 
     /**
      * Page Methods
      */
     //Go to Homepage
     public HomePage goToN11() {
-        Log.info("Opening N11 Website.");
+        Log.info("Opening Flipkat Website.");
         driver.get(baseURL);
         return this;
     }

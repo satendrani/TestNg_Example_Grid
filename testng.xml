@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="N11 Test Suite">
+<suite name="Parallel Testing Suite" parallel="tests" thread-count="5">
     <listeners>
         <listener class-name="utils.listeners.TestListener"/>
         <listener class-name="utils.listeners.AnnotationTransformer"/>
@@ -14,6 +14,7 @@
         <!--        </groups>-->
         <classes>
             <class name="tests.LoginTests"/>
+            <!--            <class name="tests.GridDemo_GoogleHomePageTest"></class>-->
             <!--                        <class name="tests.ExtentReportDemo1"></class>-->
         </classes>
     </test>

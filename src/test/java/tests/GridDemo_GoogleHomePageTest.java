@@ -13,8 +13,11 @@ import org.testng.annotations.Test;
 import utils.jiraaccess.JiraPolicy;
 
 import java.io.IOException;
+import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
+
+import static utils.extentreports.ExtentTestManager.startTest;
 
 public class GridDemo_GoogleHomePageTest extends BaseTest {
 
@@ -33,7 +36,8 @@ public class GridDemo_GoogleHomePageTest extends BaseTest {
 
     @JiraPolicy(logTicketReady = true)
     @Test(enabled = true, groups = "sanity")
-    public void test_1() throws MalformedURLException, InterruptedException {
+    public void test_1(Method method) throws MalformedURLException, InterruptedException {
+        startTest(method.getName(), "validate test_1");
         System.out.println("Test1... started");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -52,7 +56,8 @@ public class GridDemo_GoogleHomePageTest extends BaseTest {
 
     @JiraPolicy(logTicketReady = true)
     @Test(enabled = true, groups = "sanity")
-    public void test_2() throws MalformedURLException, InterruptedException {
+    public void test_2(Method method) throws MalformedURLException, InterruptedException {
+        startTest(method.getName(), "validate test_2");
         System.out.println("Test2...");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -72,7 +77,8 @@ public class GridDemo_GoogleHomePageTest extends BaseTest {
 
     @JiraPolicy(logTicketReady = true)
     @Test(enabled = true, groups = "sanity")
-    public void test_3() throws MalformedURLException, InterruptedException {
+    public void test_3(Method method) throws MalformedURLException, InterruptedException {
+        startTest(method.getName(), "validate test_3");
         System.out.println("Test3...");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -91,7 +97,8 @@ public class GridDemo_GoogleHomePageTest extends BaseTest {
 
     @JiraPolicy(logTicketReady = true)
     @Test(enabled = true, groups = "sanity")
-    public void test_4() throws MalformedURLException, InterruptedException {
+    public void test_4(Method method) throws MalformedURLException, InterruptedException {
+        startTest(method.getName(), "validate test_4");
         System.out.println("Test4...");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -110,7 +117,8 @@ public class GridDemo_GoogleHomePageTest extends BaseTest {
 
     @JiraPolicy(logTicketReady = true)
     @Test(enabled = true, groups = "sanity")
-    public void test_5() throws MalformedURLException, InterruptedException {
+    public void test_5(Method method) throws MalformedURLException, InterruptedException {
+        startTest(method.getName(), "validate test_5");
         System.out.println("Test5...");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -130,7 +138,9 @@ public class GridDemo_GoogleHomePageTest extends BaseTest {
 
     @JiraPolicy(logTicketReady = true)
     @Test(enabled = true, groups = "regression")
-    public void runOnSauceLabs() throws MalformedURLException, InterruptedException {
+    public void runOnSauceLabs(Method method) throws MalformedURLException, InterruptedException {
+        //ExtentReports Description
+        startTest(method.getName(), "Sauce Lab test");
         System.out.println("Sauce Lab test... started");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();

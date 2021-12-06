@@ -23,6 +23,7 @@ public class BaseTest {
         Log.info("Tests is starting!");
         System.setProperty("webdriver.chrome.driver", projectPath + "/resources/drivers/chromedriver.exe");
         driver = new ChromeDriver();
+
     }
 
     @BeforeMethod

@@ -19,11 +19,11 @@ public class LoginPage extends BasePage {
     /**
      * Web Elements
      */
-    By userNameId = By.id("email");
-    By passwordId = By.id("password");
-    By loginButtonId = By.id("loginButton");
-    By errorMessageUsernameXpath = By.xpath("//*[@id=\"loginForm\"]/div[1]/div/div");
-    By errorMessagePasswordXpath = By.xpath("//*[@id=\"loginForm\"]/div[2]/div/div ");
+    By userNameId = By.xpath("//form/div/input[@type=\"text\"]");
+    By passwordId = By.xpath("//form/div/input[@type=\"password\"]");
+    By loginButtonId = By.xpath("//button[@type=\"submit\"]/div");
+    By errorMessageUsernameXpath = By.xpath("//div/span/span[text()=\"Please enter valid Email ID/Mobile number\"]");
+    By errorMessagePasswordXpath = By.xpath("//span[text()='Please enter Password']");
 
     /**
      * Page Methods

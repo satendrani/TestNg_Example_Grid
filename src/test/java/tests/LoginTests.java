@@ -16,6 +16,7 @@ public class LoginTests extends BaseTest {
                 .goToLoginPage()
                 .loginToN11("onur@swtestacademy.com", "11122233444")
                 .verifyLogError();
+
     }
 
     @Test(priority = 1, description = "Invalid Login Scenario with empty username and password.", enabled = true, groups = "sanity")
