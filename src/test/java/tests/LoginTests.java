@@ -12,7 +12,7 @@ public class LoginTests extends BaseTest {
         startTest(method.getName(), "Invalid Login Scenario with invalid username and password.");
 
         homePage
-                .goToN11()
+                .goToFlipkart()
                 .goToLoginPage()
                 .loginToN11("onur@swtestacademy.com", "11122233444")
                 .verifyLogError();
@@ -25,7 +25,7 @@ public class LoginTests extends BaseTest {
         startTest(method.getName(), "Invalid Login Scenario with empty username and password.");
 
         homePage
-                .goToN11()
+                .goToFlipkart()
                 .goToLoginPage()
                 .loginToN11("", "")
                 .verifyLoginUserName("Lütfen e-posta adresinizi girin.")

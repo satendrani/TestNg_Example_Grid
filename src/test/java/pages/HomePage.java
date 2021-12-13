@@ -26,8 +26,8 @@ public class HomePage extends BasePage {
      * Page Methods
      */
     //Go to Homepage
-    public HomePage goToFlikart() {
-        Log.info("Opening Flipkat Website.");
+    public HomePage goToFlipkart() {
+        Log.info("Opening Flipkart Website.");
         driver.get(baseURL);
         return this;
     }
